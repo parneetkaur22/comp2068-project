@@ -1,0 +1,25 @@
+<% include ../partials/header %>
+     
+      <section>
+        <div class="row">
+          <% for ( let book of books ) { %>
+            <div class="col-sm-6">
+              <div class="card">
+                <div class="card-body">
+                  <h5 class="card-title">
+                    <%= book.name %>
+                  </h5>
+                  <p>
+                    <%= book.description %>
+                  </p>
+                  <a href="/books/<%= book._id %>" class="btn btn-primary">
+                    <%= book.price %>
+                  </a>
+                </div>
+              </div>
+            </div>
+          <% } %>
+        </div>
+      </section>
+
+<% include ../partials/footer %>
